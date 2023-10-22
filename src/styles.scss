@@ -1,65 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-:root .light-theme {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /*
-      Blue: hsl(207, 90%, 61%)
-      Purple: hsl(250, 66%, 75%)
-      Pink: hsl(356, 66%, 75%)
-      Teal: hsl(174, 63%, 62%)
-  */
-
-  --hue: 250;
-  --sat: 66%;
-  --lig: 75%;
-
-  --first-color: hsl(var(--hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
-  --title-color: hsl(var(--hue), 12%, 15%);
-  --text-color: hsl(var(--hue), 12%, 45%);
-  --text-color-light: hsl(var(--hue), 8%, 75%);
-  --text-color-lighten: hsl(var(--hue), 8%, 92%);
-  --body-color: hsl(var(--hue), 100%, 99%);
-  --scrollbar: hsl(var(--hue), 8%, 66%);
-  --scrollbar-thumb: hsl(var(--hue), 8%, 54%);
-  --scrollbar-thumb-hover: hsl(var(--hue), 8%, 44%);
-  --container-color: #fff;
-
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
-}
-
-:root {
-  --hue: 250;
-  --sat: 90%;
-  --lig: 61%;
-  --first-color: hsl(var(--hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--hue), var(--sat), 57%);
-  --title-color: hsl(var(--hue), 12%, 95%);
-  --text-color: hsl(var(--hue), 12%, 75%);
-  --body-color: hsl(var(--hue), 40%, 8%);
-  --text-color-lighten: var(--container-color);
-  --container-color: hsl(var(--hue), 24%, 12%);
-  --text-color-light: hsl(var(--hue), 24%, 25%);
-  --vlr-entrada: #005c53;
-  --vlr-saiu: #a50411;
-
-  --scrollbar: hsl(var(--hue), 8%, 16%);
-  --scrollbar-thumb: hsl(var(--hue), 8%, 24%);
-  --scrollbar-thumb-hover: hsl(var(--hue), 8%, 32%);
-
-  --body-font: "Poppins", sans-serif;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
-}
+@import "primeicons/primeicons.css";
+@import "primeng/resources/primeng.css";
 html,
 body {
   height: 100%;

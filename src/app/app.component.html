@@ -1,3 +1,11 @@
-<section class="text-center w-full h-auto">
-  <router-outlet></router-outlet>
+<section class="flex flex-column justify-content-between w-full h-auto">
+  <div class="p-1">
+    <p-toast [breakpoints]="{'920px': {width: '50%', right: '0'}}"></p-toast>
+    <p-menu #menu [model]="items" [popup]="true"></p-menu>
+    <p-button (click)="menu.toggle($event)" icon="pi pi-heart" [raised]="true" [text]="true"
+      [rounded]="true"></p-button>
+  </div>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
 </section>

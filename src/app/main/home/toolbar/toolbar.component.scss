@@ -1,16 +1,8 @@
 .navbar {
   color: var(--title-color);
   background: var(--text-color-lighten);
-  min-width: 250px;
-  padding: 0 2em;
-  border-radius: 40px;
+  border-radius: 1.2em;
 
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
   a {
     color: var(--title-color);
     font-size: 1.5rem;
