@@ -10,6 +10,7 @@ import { SpeedDialModule } from 'primeng/speeddial';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [],
@@ -23,6 +24,7 @@ import { TooltipModule } from 'primeng/tooltip';
     MatFormFieldModule,
     // Primeng
     AvatarModule,
+    CarouselModule,
     SpeedDialModule,
     MenuModule,
     ToastModule,
