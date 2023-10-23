@@ -1,7 +1,7 @@
-import { ThemeService } from './../assets/shared/services/theme.service';
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ViewChild } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
+
+import { ThemeService } from './../assets/shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +11,11 @@ import { MenuItem, MessageService } from 'primeng/api';
 export class AppComponent {
   title = 'portfolio-app';
   items: MenuItem[] | undefined;
+  selectedIcon: string = 'pi pi-moon';
+
+  @ViewChild('menu', { static: true }) menu: any;
 
   constructor(
-    private router: Router,
     private messageService: MessageService,
     private themeService :ThemeService
   ) { }
@@ -25,15 +27,17 @@ export class AppComponent {
         items: [
           {
             label: 'Dark',
-            icon: 'pi pi-sun',
+            icon: 'pi pi-moon',
             command: () => {
               this.theme('dark');
+              this.selectIcon('pi pi-moon');
             }
           },
           {
             label: 'Light',
-            icon: 'pi pi-moon',
+            icon: 'pi pi-sun',
             command: () => {
+              this.selectIcon('pi pi-sun');
               this.theme('light');
             }
           }
@@ -50,6 +54,10 @@ export class AppComponent {
       this.message('info', 'Tema ' + theme,' aplicado com sucesso');
     }
 
+  }
+
+  selectIcon(icon: string) {
+    this.selectedIcon = icon;
   }
 
   private message(severity:string,summary:string,detail: string) {

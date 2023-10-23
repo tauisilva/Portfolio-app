@@ -1,4 +1,13 @@
 :root {
+    /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+      Blue: hsl(207, 90%, 61%)
+      Purple: hsl(250, 66%, 75%)
+      Pink: hsl(356, 66%, 75%)
+      Teal: hsl(174, 63%, 62%)
+  */
+
   --hue: 250;
   --sat: 90%;
   --lig: 61%;
@@ -12,6 +21,7 @@
   --text-color-light: hsl(var(--hue), 24%, 25%);
   --vlr-entrada: #005c53;
   --vlr-saiu: #a50411;
+  --border-form: 1px solid rgba(255,255,255, 0.2);
 
   --scrollbar: hsl(var(--hue), 8%, 16%);
   --scrollbar-thumb: hsl(var(--hue), 8%, 24%);
@@ -23,6 +33,8 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
+  --github-img: url(assets/img/redes/github-light.png);
+  --google-img: url(assets/img/redes/g-light.png);
 }
 @import "primeng/resources/themes/soho-dark/theme.css"
 

@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ImportModulesModule } from 'src/assets/shared/import-modules/import-modules.module';
 
-import { MainRoutingModule } from './main-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './home/toolbar/toolbar.component';
-import { ImportModulesModule } from 'src/assets/shared/import-modules/import-modules.module';
-import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
+import { MainRoutingModule } from './main-routing.module';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { LoginComponent } from './login/login.component';
     CommonModule,
     MainRoutingModule,
     ImportModulesModule,
-    MatCardModule
+    ReactiveFormsModule
   ]
 })
 export class MainModule { }
