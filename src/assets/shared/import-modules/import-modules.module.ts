@@ -5,12 +5,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MessageService } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
+import { CarouselModule } from 'primeng/carousel';
 import { MenuModule } from 'primeng/menu';
+import { SkeletonModule } from 'primeng/skeleton';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
-import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [],
@@ -29,7 +30,8 @@ import { CarouselModule } from 'primeng/carousel';
     MenuModule,
     ToastModule,
     TooltipModule,
-    TagModule
+    TagModule,
+    SkeletonModule
   ],
   providers: [MessageService]
 })

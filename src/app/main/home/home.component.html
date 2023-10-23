@@ -1,9 +1,24 @@
 <section class="home">
-  <section class="container w-full flex-wrap flex align-content-center justify-content-center flex-column">
-    <section class="h-10rem w-10rem border-circle">
-      <img class="w-full border-circle h-full cover-full" src="assets/img/gifs/pato.gif" alt="">
+  <section class="top w-full flex-wrap flex align-content-center justify-content-center flex-column">
+    <section class="w-full flex-column flex align-items-center">
+      <section class="h-10rem w-10rem border-circle">
+        <img class="w-full border-circle h-full cover-full" src="assets/img/gifs/pato.gif" alt="">
+      </section>
+      <h1 class="text-base md:text-xl">Em Desenvolvimento</h1>
     </section>
-    <h1 class="text-base md:text-xl">Em Desenvolvimento</h1>
+    <section class="content w-full">
+      <p-carousel [value]="products" [numVisible]="5" [numScroll]="3" [circular]="true" [showIndicators]="false"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template pTemplate="header">
+          <p class="px-5 text-base md:text-xl">Aplicações</p>
+        </ng-template>
+        <ng-template let-product pTemplate="item">
+          <div class="h-10rem card">
+            <p-skeleton width="100%" height="100%" borderRadius="16px"></p-skeleton>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </section>
   </section>
   <section class="toolbar">
     <app-toolbar></app-toolbar>
