@@ -1,11 +1,15 @@
-<section class="flex flex-column justify-content-between flex-wrap align-content-center w-full h-auto">
+<section class="flex flex-column justify-content-between py-1 flex-wrap align-content-center w-full h-auto">
+  <section class="w-full text-center">
+    <p-tag severity="danger" value="Aplicação em desenvolvimento, coisas podem falhar 😊"></p-tag>
+  </section>
   <section class="mobile h-full">
-
-    <div class="p-1 w-full">
-      <p-toast [breakpoints]="{'920px': {width: '50%', right: '0'}}"></p-toast>
-      <p-menu #menu [model]="items" [popup]="true"></p-menu>
-      <p-button (click)="menu.toggle($event)" [icon]=selectedIcon [raised]="true" [text]="true"
-        [rounded]="true"></p-button>
+    <div class="p-1 w-full flex align-items-center">
+      <!-- <section> -->
+        <p-toast [breakpoints]="{'920px': {width: '50%', right: '0'}}"></p-toast>
+        <p-menu #menu [model]="items" [popup]="true"></p-menu>
+        <p-button (click)="menu.toggle($event)" [icon]=selectedIcon [raised]="true" [text]="true"
+          [rounded]="true"></p-button>
+      <!-- </section> -->
     </div>
     <section class="w-full">
       <router-outlet></router-outlet>

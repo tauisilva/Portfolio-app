@@ -7,6 +7,7 @@ import { MessageService } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
 import { MenuModule } from 'primeng/menu';
 import { SpeedDialModule } from 'primeng/speeddial';
+import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
 
@@ -25,7 +26,8 @@ import { TooltipModule } from 'primeng/tooltip';
     SpeedDialModule,
     MenuModule,
     ToastModule,
-    TooltipModule
+    TooltipModule,
+    TagModule
   ],
   providers: [MessageService]
 })
