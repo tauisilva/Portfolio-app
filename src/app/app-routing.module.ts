@@ -7,6 +7,9 @@ const routes: Routes = [
   },
   {
     path: 'main', loadChildren: () => import('./main/main-routing.module').then(m=> m.MainRoutingModule)
+  },
+  {
+    path: 'admin', loadChildren: () => import('./admin/admin-routing.module').then(m=> m.AdminRoutingModule)
   }
 
 ];

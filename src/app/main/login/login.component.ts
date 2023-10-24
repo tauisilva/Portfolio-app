@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         this.message('error', 'Dados Incorretos', 'Senha inválida');
       } else {
         this.message('success', 'Bem-Vindo', 'Login realizado com sucesso');
-        this.router.navigate(['/main']);
+        this.router.navigate(['/admin']);
       }
     }
     else {
