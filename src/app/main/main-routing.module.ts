@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+
+import { HomeComponent } from './components/home/home.component';
+import { MainComponent } from './main.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
-  },
-  {
-    path: 'home', component: HomeComponent
-  },
-  {
-    path: 'login', component: LoginComponent
+    path: '', component: MainComponent,
+    children: [
+      {
+        path: 'home', component: HomeComponent
+      },
+      {
+        path: 'projects', component: ProjectsComponent
+      }
+    ]
   }
+
 ];
 
 @NgModule({

@@ -5,6 +5,8 @@ section.toolbar {
   justify-content: center;
   width: 100%;
 }
-.card{
-  width: calc(100% - 20px/5);
+section.back {
+  position: fixed;
+  bottom: 5%;
+  right: 0;
 }

@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
-import { ThemeService } from './../assets/shared/services/theme.service';
+import { ThemeService } from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +23,7 @@ export class AppComponent {
   ngOnInit() {
     this.items = [
       {
-        label: 'Escolha o tema',
+        label: 'Default',
         items: [
           {
             label: 'Dark',
@@ -39,6 +39,51 @@ export class AppComponent {
             command: () => {
               this.selectIcon('pi pi-sun');
               this.theme('light');
+            }
+          }
+        ]
+      },
+      {
+        label:'Design',
+        items:[
+          {
+            label: 'Original',
+            icon: 'pi pi-moon',
+            command: () => {
+              this.theme('dark');
+              this.selectIcon('pi pi-moon');
+            }
+          },
+          {
+            label: 'Analoga',
+            icon: 'pi pi-moon',
+            command: () => {
+              this.theme('dark');
+              this.selectIcon('pi pi-moon');
+            }
+          },
+          {
+            label: 'Complementar',
+            icon: 'pi pi-moon',
+            command: () => {
+              this.theme('dark');
+              this.selectIcon('pi pi-moon');
+            }
+          },
+          {
+            label: 'Triádico',
+            icon: 'pi pi-moon',
+            command: () => {
+              this.theme('dark');
+              this.selectIcon('pi pi-moon');
+            }
+          },
+          {
+            label: 'Monocromático',
+            icon: 'pi pi-moon',
+            command: () => {
+              this.theme('dark');
+              this.selectIcon('pi pi-moon');
             }
           }
         ]

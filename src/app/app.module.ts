@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ImportModulesModule } from 'src/assets/shared/modules/import-modules.module';
+import { ImportModulesModule } from 'src/app/shared/modules/import-modules.module';
 
+import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
-import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -19,7 +20,9 @@ import { AdminModule } from './admin/admin.module';
     BrowserModule,
     ImportModulesModule,
     MainModule,
-    AdminModule
+    AdminModule,
+    ReactiveFormsModule,
+    FormsModule,
 
   ],
   exports: [

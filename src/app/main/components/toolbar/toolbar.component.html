@@ -1,7 +1,7 @@
 <mat-toolbar class="navbar">
   <section class="p-2 md:p-3 flex gap-3 justify-content-around align-content-center">
-    <a pTooltip="Em construção" tooltipPosition="top"><i class="pi pi-code"></i></a>
-    <a pTooltip="Em construção" tooltipPosition="top"><i class="pi pi-code"></i></a>
+    <a pTooltip="Em construção" tooltipPosition="top" (click)="nav('home')"><i class="pi pi-home"></i></a>
+    <a pTooltip="Projetos" tooltipPosition="top" (click)="nav('projects')"><i class="pi pi-code"></i></a>
     <a pTooltip="Login" tooltipPosition="top" (click)="login()"><i class="pi pi-user"></i></a>
   </section>
 </mat-toolbar>

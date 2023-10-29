@@ -4,12 +4,10 @@
   </section>
   <section class="mobile h-full">
     <div class="p-1 w-full flex align-items-center">
-      <!-- <section> -->
-        <p-toast [breakpoints]="{'920px': {width: '50%', right: '0'}}"></p-toast>
-        <p-menu #menu [model]="items" [popup]="true"></p-menu>
-        <p-button (click)="menu.toggle($event)" [icon]=selectedIcon [raised]="true" [text]="true"
-          [rounded]="true"></p-button>
-      <!-- </section> -->
+      <p-toast [breakpoints]="{'920px': {width: '50%', right: '0'}}"></p-toast>
+      <p-menu #menu [model]="items" [popup]="true"></p-menu>
+      <p-button (click)="menu.toggle($event)" [icon]=selectedIcon [raised]="true" [text]="true"
+        [rounded]="true"></p-button>
     </div>
     <section class="w-full">
       <router-outlet></router-outlet>

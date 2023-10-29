@@ -8,7 +8,9 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
 import { CarouselModule } from 'primeng/carousel';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { DataViewModule } from 'primeng/dataview';
 import { MenuModule } from 'primeng/menu';
+import { RatingModule } from 'primeng/rating';
 import { SidebarModule } from 'primeng/sidebar';
 import { SkeletonModule } from 'primeng/skeleton';
 import { SpeedDialModule } from 'primeng/speeddial';
@@ -16,6 +18,8 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
+
+import { Products } from '../services/products.service';
 
 @NgModule({
   declarations: [],
@@ -40,8 +44,9 @@ import { TooltipModule } from 'primeng/tooltip';
     TagModule,
     SkeletonModule,
     TabMenuModule,
-
+    DataViewModule,
+    RatingModule
   ],
-  providers: [MessageService,ConfirmationService]
+  providers: [MessageService, ConfirmationService, Products]
 })
 export class ImportModulesModule { }
