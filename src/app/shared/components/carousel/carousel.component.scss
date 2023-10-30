@@ -7,3 +7,7 @@
     width: calc(100% - 5px);
   }
 }
+::ng-deep .p-button{
+  background-color: var(--first-color);
+  color: #fff;
+}
