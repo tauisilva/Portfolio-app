@@ -15,7 +15,6 @@ export class ToolbarComponent implements OnInit{
   }
 
   nav(routers: string){
-    console.log(routers)
     this.router.navigate([routers]);
   }
 

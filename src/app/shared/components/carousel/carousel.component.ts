@@ -22,7 +22,6 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     this.service.getProducts().then((products) => {
       this.products = products;
-      console.log(products);
     })
     this.responsiveOptions = [
       {

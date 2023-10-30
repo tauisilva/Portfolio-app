@@ -20,7 +20,6 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     this.service.getProducts().then((data) => {
       if (data) {
-        console.log(data.length)
         this.products = data.slice(0, 12);
         setTimeout(() => {
           this.data = true;
