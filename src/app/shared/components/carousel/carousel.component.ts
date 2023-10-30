@@ -10,7 +10,7 @@ import { Products } from '../../services/products.service';
 })
 export class CarouselComponent implements OnInit {
   products: Product[] = [];
-  num: number = 4.1;
+  num: number = 5.1;
   responsiveOptions: any[] | undefined;
 
   constructor(
@@ -26,17 +26,17 @@ export class CarouselComponent implements OnInit {
     this.responsiveOptions = [
       {
         breakpoint: '1199px',
-        numVisible: 3,
+        numVisible: 5.1,
         numScroll: 1
       },
       {
         breakpoint: '991px',
-        numVisible: 3,
+        numVisible: 3.1,
         numScroll: 1
       },
       {
         breakpoint: '767px',
-        numVisible: 1,
+        numVisible: 1.1,
         numScroll: 1
       }
     ];
