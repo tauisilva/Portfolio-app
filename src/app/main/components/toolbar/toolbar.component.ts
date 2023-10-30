@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit{
+  selectedNavItem: string = 'home';
 
   constructor(private router: Router) { }
 
