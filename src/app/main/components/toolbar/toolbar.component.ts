@@ -16,6 +16,7 @@ export class ToolbarComponent implements OnInit{
   }
 
   nav(routers: string){
+    this.selectedNavItem = routers;
     this.router.navigate([routers]);
   }
 
