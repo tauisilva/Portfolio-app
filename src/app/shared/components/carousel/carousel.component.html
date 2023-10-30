@@ -1,5 +1,4 @@
-<p-carousel [value]="products" [numVisible]="5" [numScroll]="3" [circular]="true" [showIndicators]="false"
-  [responsiveOptions]="responsiveOptions">
+<p-carousel [value]="products" [numVisible]="4" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions" [showIndicators]="false">
   <ng-template pTemplate="header">
     <section class="px-2 py-1 flex justify-content-between">
       <p class="px-5 text-base md:text-xl">Aplicações</p>
@@ -8,10 +7,9 @@
     </section>
   </ng-template>
   <ng-template let-product pTemplate="item">
-    <div class="h-10rem md-h-15rem card"
+    <div class="h-15rem card"
       [style.background-image]="'url(https://primefaces.org/cdn/primeng/images/demo/product/' + product.image + ')'"
       style="background-repeat: no-repeat; background-position: center; background-size: cover;">
-
     </div>
   </ng-template>
 </p-carousel>

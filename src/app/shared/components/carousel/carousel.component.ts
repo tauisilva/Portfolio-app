@@ -20,14 +20,14 @@ export class CarouselComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.service.getProductsSmall().then((products) => {
+    this.service.getProducts().then((products) => {
       this.products = products;
       console.log(products);
     })
     this.responsiveOptions = [
       {
         breakpoint: '1199px',
-        numVisible: 5,
+        numVisible: 3,
         numScroll: 1
       },
       {
