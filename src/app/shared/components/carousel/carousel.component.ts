@@ -10,7 +10,7 @@ import { Products } from '../../services/products.service';
 })
 export class CarouselComponent implements OnInit {
   products: Product[] = [];
-
+  num: number = 4.1;
   responsiveOptions: any[] | undefined;
 
   constructor(
