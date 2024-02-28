@@ -1,0 +1,7 @@
+<section class="flex gap-2 w-full justify-content-center flex-wrap">
+  @for (item of repos; track item) {
+  @if(item?.language){
+  <p-tag severity="success" [value]="item?.language"></p-tag>
+  }
+  }
+</section>
