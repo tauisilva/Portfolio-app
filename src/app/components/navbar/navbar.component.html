@@ -1,0 +1,7 @@
+<section class="w-full navbar flex justify-content-end px-2">
+  <section>
+    <p-menu #menu [model]="items" [popup]="true"></p-menu>
+    <p-button severity="secondary" (click)="menu.toggle($event)" [icon]="getIcon()" [raised]="true" [rounded]="true"
+      [text]="true"></p-button>
+  </section>
+</section>
