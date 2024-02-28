@@ -1,8 +1,11 @@
-name: Angular Build and Deploy
+name: Build and Deploy Pages 
 
 on:
   push:
     branches:
+      - main
+  pull_request:
+     branches:
       - main
 
 jobs:
