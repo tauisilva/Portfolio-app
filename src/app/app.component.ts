@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./components/navbar/navbar.component";
+import { ReposComponent } from './components/repos/repos.component';
 import { ThemeService } from './services/theme.service';
 
 @Component({
@@ -8,11 +9,13 @@ import { ThemeService } from './services/theme.service';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [RouterOutlet, NavbarComponent]
+  imports: [RouterOutlet, NavbarComponent, ReposComponent]
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-app';
   private theme = inject(ThemeService);
+
+
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
       this.theme.getTheme();
