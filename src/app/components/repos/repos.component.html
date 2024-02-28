@@ -1,7 +1,23 @@
-<section class="flex gap-2 w-full justify-content-center flex-wrap">
-  @for (item of repos; track item) {
-  @if(item?.language){
-  <p-tag severity="success" [value]="item?.language"></p-tag>
-  }
-  }
+<section class="tabview">
+  <p-dataView #dv [value]="repos">
+    <ng-template pTemplate="list" let-repo>
+      <div class="grid grid-nogutter">
+        <div class="col-12">
+          @for (rep of repo; let first = $first; track $index;) {
+          <section class="flex flex-column xl:flex-row xl:align-content-start p-4 gap-4"
+            [ngClass]="{ 'border-top-1 surface-border': !first }">
+            <div class="flex flex-column sm:flex-row justify-content-between 
+              align-items-center xl:align-items-start flex-1 gap-4">
+              <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                <div class="text-2xl font-bold text-900">{{ rep.name }}
+                  <p-tag *ngIf="rep?.language" severity="success" [value]="rep?.language"></p-tag>
+                </div>
+              </div>
+            </div>
+          </section>
+          }
+        </div>
+      </div>
+    </ng-template>
+  </p-dataView>
 </section>

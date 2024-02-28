@@ -1,4 +1,5 @@
-<section class="w-full navbar flex justify-content-end px-2">
+<section class="w-full navbar flex justify-content-between px-2">
+  <p-tag severity="danger" value="Aplicação em desenvolvimento, erros podem ocorrer! 😊"></p-tag>
   <section>
     <p-menu #menu [model]="items" [popup]="true"></p-menu>
     <p-button severity="secondary" (click)="menu.toggle($event)" [icon]="getIcon()" [raised]="true" [rounded]="true"

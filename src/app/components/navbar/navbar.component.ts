@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
+import { TagModule } from 'primeng/tag';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { ThemeService } from '../../services/theme.service';
   standalone: true,
   imports: [
     ButtonModule,
-    MenuModule
+    MenuModule,
+    TagModule
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
