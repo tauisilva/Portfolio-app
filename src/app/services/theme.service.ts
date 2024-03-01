@@ -9,7 +9,6 @@ export class ThemeService {
   getTheme() {
     const theme = sessionStorage.getItem('theme');
     if (theme) {
-      console.log(theme)
       this.setTheme(theme);
     }
   }

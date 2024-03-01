@@ -1,11 +1,12 @@
 <section class="tabview">
-  <p-dataView #dv [value]="repos">
+  <p-dataView #dv [value]="repos" [rows]="5" [paginator]="true">
     <ng-template pTemplate="list" let-repo>
       <div class="grid grid-nogutter">
         <div class="col-12">
           @for (rep of repo; let first = $first; track $index;) {
           <section class="flex flex-column xl:flex-row xl:align-content-start p-4 gap-4"
             [ngClass]="{ 'border-top-1 surface-border': !first }">
+            <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" [src]="rep.img" loading="eager" />
             <div class="flex flex-column sm:flex-row justify-content-between 
               align-items-center xl:align-items-start flex-1 gap-4">
               <div class="flex flex-column align-items-center sm:align-items-start gap-3">
