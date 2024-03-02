@@ -1,4 +1,30 @@
-<section class="tabview">
+<section class="carousel">
+  <p-carousel [value]="repos"[numScroll]="1" [numVisible]="5" [responsiveOptions]="respOptions">
+    <ng-template pTemplate="header">
+      <p class="pl-3 font-bold">Github - Repositórios</p>
+    </ng-template>
+    <ng-template let-repo pTemplate="item">
+      <div class="border-1 h-full surface-border border-round m-2 text-center px-3">
+        <section class="w-full top-info">
+          <p class="font-semibold">{{ repo.name }}</p>
+          <a class="icon" [href]="repo.html_url" target="_blank"><i class="pi pi-github"></i></a>
+        </section>
+        <div class="mb-3">
+          <img [src]="repo.img" alt="" class="w-full shadow-2" loading="eager">
+        </div>
+        <div>
+          <h6 class="mt-0 mb-3">{{ repo.description }}</h6>
+          <p-tag *ngIf="repo?.language" severity="success" [value]="repo?.language"></p-tag>
+          <div class="mt-5 flex align-items-center justify-content-center gap-2">
+            <!-- <p-button icon="pi pi-search" [rounded]="true" />
+                <p-button icon="pi pi-star-fill" [rounded]="true" severity="secondary" /> -->
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</section>
+<!-- <section class="tabview">
   <p-dataView #dv [value]="repos" [rows]="5" [paginator]="true">
     <ng-template pTemplate="list" let-repo>
       <div class="grid grid-nogutter">
@@ -6,7 +32,8 @@
           @for (rep of repo; let first = $first; track $index;) {
           <section class="flex flex-column xl:flex-row xl:align-content-start p-4 gap-4"
             [ngClass]="{ 'border-top-1 surface-border': !first }">
-            <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" [src]="rep.img" loading="eager" />
+            <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" [src]="rep.img"
+              loading="eager" />
             <div class="flex flex-column sm:flex-row justify-content-between 
               align-items-center xl:align-items-start flex-1 gap-4">
               <div class="flex flex-column align-items-center sm:align-items-start gap-3">
@@ -21,4 +48,4 @@
       </div>
     </ng-template>
   </p-dataView>
-</section>
+</section> -->

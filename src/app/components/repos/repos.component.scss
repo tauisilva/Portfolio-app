@@ -1,0 +1,26 @@
+.carousel {
+  ::ng-deep .p-carousel-item {
+    padding-bottom: .5rem;
+  }
+
+  .top-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0 1rem 0;
+
+    p {
+      margin: 0;
+    }
+
+    a.icon {
+      color: black;
+
+      i {
+        font-size: larger;
+      }
+    }
+
+  }
+}

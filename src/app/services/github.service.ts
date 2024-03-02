@@ -8,12 +8,12 @@ import { environment } from '../../env/env';
 })
 export class GithubService {
 
-  private api = `${environment.GIT_Api}`;
+  private api = `${environment.API_GITHUB}`;
   private http = inject(HttpClient);
   constructor() { }
 
-  getAll(user: string) {
-    return this.http.get<any>(`${this.api}/users/${user}/repos`);
+  getAll() {
+    return this.http.get<any>(`${this.api}/users/${environment.USER_GITHUB}/repos`);
   }
 
   getImg(url: string): Observable<string | null> {
