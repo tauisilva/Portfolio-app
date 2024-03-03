@@ -31,4 +31,18 @@ export class GithubService {
     return firstTag ? firstTag.content : null;
   }
 
+  getLangs(repo: any) {
+    return this.http.get<any>(`${this.api}/repos/${repo}/languages`);
+  }
+
+  // async getInfos(repo: any) {
+  //   const data = await this.http.get<any>(`${this.api}/${repo}/contents/${environment.FILE_INFOS}`).toPromise();
+  //   if (data) {
+  //     const base = data?.content;
+  //     const j = atob(base);
+  //     return JSON.parse(j);
+  //   } else {
+  //     return null;
+  //   }
+  // }
 }

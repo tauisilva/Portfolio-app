@@ -9,7 +9,11 @@ import { ThemeService } from './services/theme.service';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [RouterOutlet, NavbarComponent, ReposComponent]
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    ReposComponent
+  ]
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-app';
