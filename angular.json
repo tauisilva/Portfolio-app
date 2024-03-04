@@ -105,7 +105,7 @@
               "src/styles.scss",
               {
                 "input": "primeng/resources/themes/md-light-deeppurple/theme.css",
-                "bundleName": "dark",
+                "bundleName": "light",
                 "inject": false
               },
               {
@@ -114,7 +114,8 @@
                 "inject": false
               },
               "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/primeflex/primeflex.css"
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
             ],
             "scripts": []
           }
