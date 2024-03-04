@@ -3,6 +3,7 @@ import { Component, OnInit, ViewEncapsulation, inject } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { DataViewModule } from 'primeng/dataview';
 import { TagModule } from 'primeng/tag';
+import { repos } from '../../models/dados';
 import { GithubService } from '../../services/github.service';
 import { fIsoDate } from '../../utils/data';
 
@@ -32,16 +33,17 @@ export class ReposComponent implements OnInit {
 
   ngOnInit(): void {
     this.respOptions = [
-      { breakpoint: '2559px', numVisible: 5, numScroll: 1 },
-      { breakpoint: '1919px', numVisible: 5, numScroll: 1 },
-      { breakpoint: '1439px', numVisible: 3, numScroll: 1 },
-      { breakpoint: '1366px', numVisible: 3, numScroll: 1 },
-      { breakpoint: '1199px', numVisible: 2, numScroll: 1 },
-      { breakpoint: '991px', numVisible: 2, numScroll: 1 },
+      { breakpoint: '2559px', numVisible: 5, numScroll: 5 },
+      { breakpoint: '1919px', numVisible: 5, numScroll: 5 },
+      { breakpoint: '1439px', numVisible: 3, numScroll: 3 },
+      { breakpoint: '1366px', numVisible: 3, numScroll: 3 },
+      { breakpoint: '1199px', numVisible: 2, numScroll: 2 },
+      { breakpoint: '991px', numVisible: 2, numScroll: 2 },
       { breakpoint: '599px', numVisible: 1, numScroll: 1 }
 
     ]
-    // this.repos = repos;
+    // this.repos = repos.slice(0, 10);
+    // console.log(this.repos.length)
     this.load();
     // this.repos.forEach((r) => {
     //   const l = r.lang;

@@ -4,46 +4,48 @@
       <p class="pl-3 font-bold">Github - Repositórios</p>
     </ng-template>
     <ng-template let-repo pTemplate="item">
-      <div class="border-1 h-full surface-border border-round m-2 text-center px-3">
-        <section class="w-full top-info">
-          <p class="font-semibold">{{ repo.name }}</p>
-          <img src="assets/logos/angular17.png" class="icon">
-        </section>
-        <img [src]="repo.img" alt="" class="w-full shadow-2 border-round" loading="eager">
-        <div class="w-full body h-full">
-          <div class="flex justify-content-between">
-            <span class="date">Criado:<strong>{{formatData(repo.created_at)}}</strong></span>
-            <span class="date">Atualidao:<strong>{{formatData(repo.updated_at)}}</strong> </span>
-          </div>
-          <div class="w-full h-auto gap-1 flex">
-            <section class="w-full h-full">
-              <section class="w-full h-full flex border-round overflow-hidden">
-                @for (language of repo.langs; track $index) {
-                <div class="bar" [style.width]="language.percentage + '%'" [style.backgroundColor]="language.color">
-                </div>
-                }
-              </section>
-              <section class="w-full">
-                <section class="flex justify-content-between">
-                  @for (lan of repo.langs; track $index) {
-                  <div class="lang">
-                    <span class="bol" [style.backgroundColor]="lan.color"></span>
-                    <span class="txt">{{lan.name}}</span>
+      <div class="p-1 h-full">
+        <div class="border-1 h-full surface-border border-round text-center px-3">
+          <section class="w-full top-info">
+            <p class="font-semibold">{{ repo.name }}</p>
+            <img src="assets/logos/angular17.png" class="icon">
+          </section>
+          <img [src]="repo.img" alt="" class="w-full shadow-2 border-round" loading="eager">
+          <div class="w-full body h-full">
+            <div class="flex justify-content-between">
+              <span class="date">Criado:<strong>{{formatData(repo.created_at)}}</strong></span>
+              <span class="date">Atualidao:<strong>{{formatData(repo.updated_at)}}</strong> </span>
+            </div>
+            <div class="w-full h-auto gap-1 flex">
+              <section class="w-full h-full">
+                <section class="w-full h-full flex border-round overflow-hidden">
+                  @for (language of repo.langs; track $index) {
+                  <div class="bar" [style.width]="language.percentage + '%'" [style.backgroundColor]="language.color">
                   </div>
                   }
                 </section>
+                <section class="w-full">
+                  <section class="flex justify-content-between">
+                    @for (lan of repo.langs; track $index) {
+                    <div class="lang">
+                      <span class="bol" [style.backgroundColor]="lan.color"></span>
+                      <span class="txt">{{lan.name}}</span>
+                    </div>
+                    }
+                  </section>
+                </section>
               </section>
+              <p-tag *ngIf="repo?.language" severity="success" [value]="repo?.language"></p-tag>
+            </div>
+            <section class="w-full text-left h-3rem">
+              <p class="description">{{ repo.description }}</p>
             </section>
-            <p-tag *ngIf="repo?.language" severity="success" [value]="repo?.language"></p-tag>
+            <section class="flex py-1 gap-2 justify-content-end">
+              <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-github"></i></a>
+              <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-eye"></i></a>
+              <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-info"></i></a>
+            </section>
           </div>
-          <section class="w-full text-left h-3rem">
-            <p class="description">{{ repo.description }}</p>
-          </section>
-          <section class="flex gap-2 justify-content-end">
-            <a class="icon" [href]="repo.html_url" target="_blank"><i class="pi pi-github"></i></a>
-            <a class="icon" [href]="repo.html_url" target="_blank"><i class="pi pi-eye"></i></a>
-            <a class="icon" [href]="repo.html_url" target="_blank"><i class="pi pi-info"></i></a>
-          </section>
         </div>
       </div>
     </ng-template>
