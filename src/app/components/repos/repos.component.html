@@ -16,19 +16,19 @@
               <span class="date">Criado:<strong>{{formatData(repo.created_at)}}</strong></span>
               <span class="date">Atualidao:<strong>{{formatData(repo.updated_at)}}</strong> </span>
             </div>
-            <div class="w-full h-auto gap-1 flex">
-              <section class="w-full h-full">
-                <section class="w-full h-full flex border-round overflow-hidden">
+            <div class="w-full h-auto gap-1 flex justify-content-between">
+              <section class="w-9 h-full">
+                <section class="w-full h-full shadow-2 flex border-round overflow-hidden">
                   @for (language of repo.langs; track $index) {
-                  <div class="bar" [style.width]="language.percentage + '%'" [style.backgroundColor]="language.color">
-                  </div>
+                  <span class="bar" [style.width]="language.percentage + '%'" [style.backgroundColor]="language.color">
+                  </span>
                   }
                 </section>
                 <section class="w-full">
-                  <section class="flex justify-content-between">
+                  <section class="flex flex-wrap gap-1">
                     @for (lan of repo.langs; track $index) {
                     <div class="lang">
-                      <span class="bol" [style.backgroundColor]="lan.color"></span>
+                      <span class="bol shadow-2" [style.backgroundColor]="lan.color"></span>
                       <span class="txt">{{lan.name}}</span>
                     </div>
                     }
@@ -36,14 +36,23 @@
                 </section>
               </section>
               <p-tag *ngIf="repo?.language" severity="success" [value]="repo?.language"></p-tag>
+              <!-- <p-chip *ngIf="repo?.language" [label]="repo?.language"></p-chip> -->
             </div>
             <section class="w-full text-left h-3rem">
               <p class="description">{{ repo.description }}</p>
             </section>
-            <section class="flex py-1 gap-2 justify-content-end">
-              <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-github"></i></a>
-              <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-eye"></i></a>
-              <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-info"></i></a>
+            <section class="flex py-1 footer" [ngClass]="{ 'justify-content-between': repo.name === isPort,
+               'justify-content-end': repo.name !== isPort }">
+              <section class="flex border-yellow-500 text-sm icon w-auto gap-1 align-items-center"
+                *ngIf="repo.name === isPort">
+                <p class="m-0 font-bold">este site</p>
+                <i class="bi bi-stars text-yellow-500"></i>
+              </section>
+              <section class="flex gap-2">
+                <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-github"></i></a>
+                <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-eye"></i></a>
+                <a class="icon" [href]="repo.html_url" target="_blank"><i class="bi bi-info"></i></a>
+              </section>
             </section>
           </div>
         </div>

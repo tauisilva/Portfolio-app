@@ -52,7 +52,6 @@
 
   .top-info {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: .5rem 0 1rem 0;
@@ -64,8 +63,6 @@
     img.icon {
       width: 1.5rem;
     }
-
-
   }
 
   .body {
@@ -93,16 +90,17 @@
       padding: .25rem 0;
     }
 
-    a.icon {
-      color: var(--text-color);
-      border: 1px solid var(--surface-border);
-      padding: .1rem .25rem;
-      border-radius: 5px;
-      background-color: transparent;
-      backdrop-filter: blur(50px);
+    .footer {
 
-      i {
-        font-size: larger;
+      .icon {
+        color: var(--text-color);
+        border: 1px solid var(--surface-border);
+        padding: .1rem .25rem;
+        border-radius: 5px;
+
+        i {
+          font-size: medium;
+        }
       }
     }
   }

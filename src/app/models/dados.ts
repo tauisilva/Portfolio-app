@@ -12,7 +12,7 @@ export const repos = [
 
   },
   {
-    name: 'Obj test 2',
+    name: 'Portfolio-app',
     html_url: 'url 2',
     description: 'kjsdhjksndjk 2',
     language: 'Java',
@@ -48,7 +48,7 @@ export const repos = [
 
   },
   {
-    name: 'Obj test 2',
+    name: "portfolio-app",
     html_url: 'url 2',
     description: 'kjsdhjksndjk 2',
     language: 'Java',
