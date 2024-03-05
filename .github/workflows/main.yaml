@@ -46,4 +46,4 @@ jobs:
           branch: gh-pages  
           folder: dist/browser
           target-folder: .
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN  }}
