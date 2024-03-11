@@ -3,10 +3,10 @@ name: Build and Deploy Pages
 on:
   push:
     branches:
-      - main
+      - dev
   pull_request:
      branches:
-      - main
+      - dev
 
 jobs:
   build:
@@ -27,5 +27,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/browser
-          branch: prod  
           token: ${{ secrets.GH_TOKEN }}
