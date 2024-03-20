@@ -28,4 +28,4 @@ jobs:
         with:
           folder: dist/browser
           branch: prod  
-          token: ${{ secrets.GITHUB_TOKEN}}
+          token: ${{ secrets.TOKEN_GIT}}
