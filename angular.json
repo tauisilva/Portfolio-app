@@ -17,39 +17,27 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/",
+            "outputPath": "dist/portfolio-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.scss",
-              {
-                "input": "primeng/resources/themes/md-light-deeppurple/theme.css",
-                "bundleName": "light",
-                "inject": false
-              },
-              {
-                "input": "primeng/resources/themes/md-dark-deeppurple/theme.css",
-                "bundleName": "dark",
-                "inject": false
-              },
-              "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/primeflex/primeflex.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "outputMode": "server",
             "ssr": {
-              "entry": "server.ts"
+              "entry": "src/server.ts"
             }
           },
           "configurations": {
@@ -83,40 +71,21 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "portfolio-app:build"
-          }
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss",
               {
-                "input": "primeng/resources/themes/md-light-deeppurple/theme.css",
-                "bundleName": "light",
-                "inject": false
-              },
-              {
-                "input": "primeng/resources/themes/md-dark-deeppurple/theme.css",
-                "bundleName": "dark",
-                "inject": false
-              },
-              "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/primeflex/primeflex.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
@@ -124,6 +93,6 @@
     }
   },
   "cli": {
-    "analytics": "645adab0-5b84-4156-8f7f-4f93f56863f3"
+    "analytics": "5b09fc89-3c1d-47a0-8323-01f00b63da1e"
   }
 }

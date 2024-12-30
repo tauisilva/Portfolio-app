@@ -1,0 +1,20 @@
+.theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  // border: 1px solid var(--p-content-border-color);
+  width: 2rem;
+  height: 2rem;
+  transition: outline-color .2s, border-color .2s;
+  border-radius: 6px;
+  margin: 0;
+  padding: 0;
+  outline-color: transparent;
+  // background-color: var(--p-content-background);
+  cursor: pointer;
+
+  i {
+    font-size: var(--p-icon-size);
+  }
+}

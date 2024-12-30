@@ -1,12 +1,5 @@
-<section class="w-full h-screen">
-  <section class="w-full h-auto">
-    <app-navbar></app-navbar>
-  </section>
-  <section class="w-full h-auto flex flex-column align-items-center justify-content-center">
-    <h1 class="text-7xl">COMING SOON 🦄⏳</h1>
-  </section>
-  <section class="w-full">
-    <app-repos></app-repos>
-  </section>
-
+<section class="w-full flex justify-end pt-3 h-full">
+  <button class="theme" type="button" (click)="toggleDarkMode()">
+    <i class="bi" [ngClass]="isDarkMode() ? 'bi-moon' : 'bi-sun'"></i>
+  </button>
 </section>

@@ -1,28 +1,29 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "./components/navbar/navbar.component";
-import { ReposComponent } from './components/repos/repos.component';
-import { ThemeService } from './services/theme.service';
+import { NgClass } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '@shared/theme.service';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+  imports: [ButtonModule, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [
-    RouterOutlet,
-    NavbarComponent,
-    ReposComponent
-  ]
+  viewProviders: [ThemeService]
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-app';
-  private theme = inject(ThemeService);
 
+  constructor(private theme: ThemeService) { }
 
-  ngOnInit(): void {
-    if (typeof window !== 'undefined') {
-      this.theme.getTheme();
-    }
+  ngOnInit() {
+    this.theme.init();
+  }
+
+  toggleDarkMode() {
+    this.theme.toggleDarkMode();
+  }
+
+  isDarkMode() {
+    return this.theme.darkMode;
   }
 }
