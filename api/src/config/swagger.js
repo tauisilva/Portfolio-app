@@ -1,6 +1,5 @@
-const swaggerJsdoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
-// require('dotenv').config();
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
 
 const options = {
   definition: {
@@ -12,7 +11,6 @@ const options = {
     },
     servers: [
       {
-        // url: process.env.BASE_URL || "http://localhost:3000",
         url: "http://localhost:3000",
         description: 'Servidor de desenvolvimento local',
       },
@@ -22,11 +20,11 @@ const options = {
       },
     ],
   },
-  apis: ['./api/src/index.js'],
+  apis: ['./api/src/server.js'],
 };
 
 const specs = swaggerJsdoc(options);
 
-module.exports = (app) => {
+export default (app) => {
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 };

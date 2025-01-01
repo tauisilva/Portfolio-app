@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -17,4 +18,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: light-dark(var(--p-surface-50), var(--p-surface-950));
+}
+
+.ft_name {
+  font-family: "Oswald", serif;
+
+  i:before {
+    font-weight: 900 !important;
+  }
 }

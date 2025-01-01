@@ -1,5 +1,22 @@
-<section class="w-full flex justify-end pt-3 h-full">
-  <button class="theme" type="button" (click)="toggleDarkMode()">
-    <i class="bi" [ngClass]="isDarkMode() ? 'bi-moon' : 'bi-sun'"></i>
-  </button>
+<section class="w-full items-center flex justify-between pt-3 h-full">
+  <section class="flex ft_name text-2xl items-center gap-2">
+    <i class="bi bi-code-slash"></i>
+    <p class="m-0">Taui Silva Lima</p>
+  </section>
+  <section class="flex text-xl">
+    <ng-container *ngFor="let button of buttons">
+      <button class="theme" type="button" (click)="button.action()">
+        <i class="bi" [ngClass]="button.icon"></i>
+      </button>
+    </ng-container>
+    <button class="theme" type="button" (click)="toggleDarkMode()">
+      <i class="bi" [ngClass]="isDarkMode() ? 'bi-moon' : 'bi-sun'"></i>
+    </button>
+  </section>
+</section>
+<section class="flex h-full items-center justify-between">
+  <section class="flex h-full text-6xl">
+    EM CONSTRUÇÃO
+  </section>
+  <img src="assets/svg/home.svg" />
 </section>

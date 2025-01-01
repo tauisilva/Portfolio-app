@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve\" \"node api/src/index.js\"",
-    "startserver": "node server/js/server.js",
+    "start": "concurrently \"ng serve\" \"node api/src/server.js\"",
+    "startserver": "concurrently \"ng build\" \"node api/src/server.js\"",
     "build": "ng build",
     "build:prod": "ng build --configuration=production --base-href=/portfolio-app/",
     "prebuild": "cd api && npm install",
