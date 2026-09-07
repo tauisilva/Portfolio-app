@@ -105,9 +105,9 @@ To ensure high maintainability, avoid technical debt, and prevent SonarQube / li
 ## 5. Internationalization (i18n)
 
 The application supports three primary languages:
-1. **English (`en`)** — Default / Base Language.
-2. **Portuguese (`pt-BR`)**.
-3. **Spanish (`es`)**.
+1. **Portuguese (`pt-BR`)** — **Default / Base Language** (initial display and fallback).
+2. **English (`en`)** — Secondary Language.
+3. **Spanish (`es`)** — Secondary Language.
 
 ### 5.1. Rules for Text Content
 - **Zero Hardcoded Strings**: No human-readable string may be hardcoded directly into `.html` templates or `.ts` alert/toast strings.
