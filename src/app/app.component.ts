@@ -1,11 +1,10 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '@shared/theme.service';
-import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-root',
-  imports: [ButtonModule, NgClass, NgFor],
+  imports: [NgClass, NgFor],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   viewProviders: [ThemeService],

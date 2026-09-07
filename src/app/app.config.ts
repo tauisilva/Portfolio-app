@@ -4,8 +4,6 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import Aura from '@primeng/themes/aura';
-import { providePrimeNG } from 'primeng/config';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -14,16 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
-    provideAnimations(),
-    providePrimeNG({
-      theme: {
-        preset: Aura,
-        options: {
-          darkModeSelector: '.my-app-dark',
-          primary: 'noir',
-        }
-      },
-      ripple: true
-    })
+    provideAnimations()
   ]
 };
