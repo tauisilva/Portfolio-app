@@ -1,0 +1,113 @@
+{
+  "folders": [
+    {
+      "name": "Frontend (Portfolio-app)",
+      "path": "."
+    },
+    {
+      "name": "Backend (Portfolio-api)",
+      "path": "../Portfolio-api"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/target": true,
+      "**/.angular": true,
+      "**/dist": true
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "editor.formatOnSave": true
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Docker: Subir Banco de Dados (PostgreSQL)",
+        "type": "shell",
+        "command": "docker compose -f ../Portfolio-api/compose.yaml up -d",
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "Docker: Parar Banco de Dados",
+        "type": "shell",
+        "command": "docker compose -f ../Portfolio-api/compose.yaml down",
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "Backend: Iniciar Spring Boot (Portfolio-api)",
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder:Backend (Portfolio-api)}"
+        },
+        "command": "./mvnw spring-boot:run",
+        "windows": {
+          "command": ".\\mvnw.cmd spring-boot:run"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Frontend: Iniciar Angular (Portfolio-app)",
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder:Frontend (Portfolio-app)}"
+        },
+        "command": "npm start",
+        "isBackground": true,
+        "problemMatcher": {
+          "owner": "typescript",
+          "pattern": "$tsc",
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": {
+              "regexp": "(.*?)"
+            },
+            "endsPattern": {
+              "regexp": "bundle generation complete"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Angular: Iniciar e Depurar",
+        "type": "chrome",
+        "request": "launch",
+        "preLaunchTask": "Frontend: Iniciar Angular (Portfolio-app)",
+        "url": "http://localhost:4200/"
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "vscjava.vscode-java-pack",
+      "vmware.vscode-spring-boot",
+      "angular.ng-template",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "ms-azuretools.vscode-docker",
+      "bradlc.vscode-tailwindcss"
+    ]
+  }
+}
