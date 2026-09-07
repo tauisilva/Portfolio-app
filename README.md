@@ -1,59 +1,72 @@
-# PortfolioApp
+# 💻 Portfolio App — Frontend Pessoal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+<div align="center">
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular_19-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 
-To start a local development server, run:
+Aplicação web reativa desenvolvida com **Angular 19** e **Tailwind CSS**, funcionando como o portal interativo do meu portfólio profissional, vitrine de projetos, trajetória de carreira e competências técnicas.
 
-```bash
-ng serve
-```
+</div>
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🔗 Backend & Arquitetura Fullstack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Esta interface consome dados dinâmicos e serviços da API RESTful desenvolvida em **Java / Spring Boot**:
 
-```bash
-ng generate component component-name
-```
+👉 **[Portfolio API — Repositório do Backend (Java 23, Spring Boot 3.4, PostgreSQL, Docker)](https://github.com/tauisilva/Portfolio-api)**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## ✨ Funcionalidades Principais
 
-## Building
+- 👤 **Apresentação Profissional:** Resumo executivo, competências de backend/fullstack e links rápidos para currículo, LinkedIn e GitHub.
+- 🚀 **Vitrine Dinâmica de Projetos:** Cards com resumo, tags visuais de tecnologia, links diretos para repositórios e Live Demos.
+- ⏳ **Linha do Tempo (Timeline):** Trajetória profissional (Websis Tecnologia) e formação acadêmica em Ciência da Computação (UDF).
+- 🎨 **Design Moderno e Responsivo:** Construído com Tailwind CSS para garantir performance e adaptação a dispositivos móveis e desktops.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🛠️ Tecnologias Utilizadas
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **Framework:** [Angular 19](https://angular.dev/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+- **Gerenciador de Pacotes:** [npm](https://www.npmjs.com/)
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🚀 Como Executar Localmente
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### 1. Clonar o repositório
 
 ```bash
-ng e2e
+git clone https://github.com/tauisilva/Portfolio-app.git
+cd Portfolio-app
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### 2. Instalar as dependências
 
-## Additional Resources
+```bash
+npm install
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 3. Iniciar o servidor de desenvolvimento
+
+```bash
+npm start
+```
+
+Acesse a aplicação no navegador em:
+👉 `http://localhost:4200/`
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Taui Silva Lima**
+- GitHub: [@tauisilva](https://github.com/tauisilva)
+- LinkedIn: [linkedin.com/in/tauisilva](https://www.linkedin.com/in/tauisilva/)
