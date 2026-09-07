@@ -19,8 +19,12 @@
     "module": "ES2022",
     "paths": {
       "@shared/*": ["./src/app/shared/*"],
-      "@assets/*": ["./src/assets/*"],
-    }
+      "@assets/*": ["./src/assets/*"]
+    },
+    "types": [
+      "jasmine",
+      "node"
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
