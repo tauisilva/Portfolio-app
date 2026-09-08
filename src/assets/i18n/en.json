@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Taui Silva | Full Stack Software Engineer",
+    "description": "Portfolio of Taui Silva — Full Stack Software Engineer delivering resilient architectures with Quarkus & Java and modern reactive interfaces with Angular."
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Fullstack Projects",
+    "stack": "Stack",
+    "articles": "Articles",
+    "contact": "Contact",
+    "resume": "Contact / Resume",
+    "color_mode": "Toggle color mode",
+    "language": "Language"
+  },
+  "hero": {
+    "status_badge": "Available for Full Stack Projects",
+    "headline_prefix": "End-to-End Software Engineering:",
+    "headline_pixel": "from pixel",
+    "headline_to": "to",
+    "headline_database": "database.",
+    "subtitle": "Full Stack Developer combining reactive, accessible interfaces with Angular to resilient architectures and microservices in Java & Quarkus.",
+    "cta_projects": "View Fullstack Projects",
+    "cta_article": "Read Article on DEV.to",
+    "metrics": {
+      "exp_label": "Experience",
+      "exp_val": "6+ Years",
+      "exp_sub": "Full Stack",
+      "uptime_label": "Availability",
+      "uptime_val": "99.9%",
+      "uptime_sub": "Uptime & SLA",
+      "arch_label": "Architecture",
+      "arch_val": "End-to-End",
+      "arch_sub": "Frontend SPA + Java APIs"
+    },
+    "architecture_card": {
+      "file_path": "fullstack-pipeline.ts • java",
+      "badge": "End-to-End Reactive",
+      "tier1_title": "TIER 1: Angular 22 SPA (Signals & Standalone)",
+      "tier1_tag": "Client",
+      "stream_badge": "SSE / Event Stream",
+      "stream_desc": "••• HTTP/2 JSON Event Stream •••",
+      "latency": "14ms latency",
+      "tier2_title": "TIER 2: Quarkus 3 REST Reactive API",
+      "tier2_tag": "Microservice",
+      "status_docker": "Docker Compose: Healthy",
+      "status_uptime": "Uptime: 99.98%"
+    }
+  },
+  "projects": {
+    "eyebrow": "Full Stack Applications in Production",
+    "title": "End-to-End Engineering Solutions",
+    "subtitle": "Integrated ecosystems uniting reactive frontend architectures in Angular with resilient microservices in Java & Quarkus.",
+    "indexed": "Indexed // 05 Releases",
+    "live_demo": "Live Demo",
+    "frontend_repo": "Frontend Repo",
+    "backend_repo": "Backend Repo",
+    "github_code": "GitHub Code",
+    "architecture": "Architecture"
+  },
+  "articles": {
+    "badge": "DEV.to Community",
+    "eyebrow": "Featured Technical Article",
+    "read_more": "Read on DEV.to",
+    "read_time": "5 min read",
+    "views": "+1.2k views",
+    "reactions": "148 reactions"
+  },
+  "stack": {
+    "eyebrow": "Technical Specialty Matrix",
+    "title": "Full Stack Proficiency: Frontend, Backend & Infra",
+    "subtitle": "A balanced perspective of competencies for complete development, from user experience to containerized infrastructure.",
+    "frontend_title": "Frontend Engineering",
+    "frontend_sub": "Angular & Modern Web",
+    "backend_title": "Backend Architecture",
+    "backend_sub": "Java & Quarkus Framework",
+    "devops_title": "DevOps & Infrastructure",
+    "devops_sub": "Containers, Cloud & CI/CD"
+  },
+  "contact": {
+    "eyebrow": "Interactive Session",
+    "title": "Professional Connection Terminal",
+    "pod_status": "Active Pod • Fullstack",
+    "terminal_msg": "Building the future of the web: Angular + Java/Quarkus",
+    "operational": "All fullstack services operational • Cloud-hosted",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "devto": "DEV.to"
+  },
+  "footer": {
+    "role": "Full Stack Software Engineer (Angular & Quarkus)",
+    "description": "End-to-end software engineering: modern responsive interfaces, reactive microservices, and high scalability.",
+    "status": "System status: Production Ready",
+    "rights": "© 2026 Taui Silva. All rights reserved."
+  }
+}
