@@ -23,6 +23,10 @@ In compliance with the modern Angular Style Guide (Angular 20+ / 22), **technica
 - **Tests**: Keep the `.spec.ts` suffix for test runners:
   - ✅ `project-card.spec.ts`, `theme-store.spec.ts`
 
+### 1.2. Pair-Programming & Collaboration Rules
+- **Instructional & Architectural Clarity**: Always provide clear step-by-step instructions on *how* to implement changes, accompanied by the engineering rationale (*the "why"*) behind every architectural decision.
+- **Strict Commit Confirmation**: **NEVER run `git commit` or `git push` automatically.** Always propose the changes, review the diff with the user, and explicitly ask for permission before executing any commit.
+
 - **User-Facing Content Exception**: Any user-facing copy in Portuguese or Spanish MUST live strictly in the i18n translation assets, never hardcoded in TypeScript or HTML templates.
 
 ---
@@ -149,7 +153,7 @@ The application supports three primary languages:
 
 ## 7. Testing & Verification
 
-- **Unit Tests**: Every service, utility, and component must have associated Jasmine/Karma spec files (`*.spec.ts`).
+- **Unit Tests**: Every service, utility, and component must have associated Vitest spec files (`*.spec.ts`) running on `@angular/build:unit-test` with jsdom.
 - **Pre-commit Verification**:
   ```bash
   # Check type safety
@@ -159,5 +163,5 @@ The application supports three primary languages:
   npm run build
 
   # Run test suite
-  npm run test -- --watch=false --browsers=ChromeHeadless
+  npm run test:ci
   ```
