@@ -24,19 +24,19 @@ describe('LanguageStore', () => {
 
   it('should translate nested keys in default language (pt-BR)', () => {
     store.setLanguage('pt-BR');
-    expect(store.t('nav.about')).toBe('Sobre');
-    expect(store.t('nav.projects')).toBe('Projetos Fullstack');
+    expect(store.t('nav.about')).toBe('Sobre Mim');
+    expect(store.t('nav.projects')).toBe('Projetos');
   });
 
   it('should switch language dynamically to English and Spanish', () => {
     store.setLanguage('en');
     expect(store.currentLanguage()).toBe('en');
-    expect(store.t('nav.about')).toBe('About');
+    expect(store.t('nav.about')).toBe('About Me');
     expect(document.documentElement.getAttribute('lang')).toBe('en');
 
     store.setLanguage('es');
     expect(store.currentLanguage()).toBe('es');
-    expect(store.t('nav.about')).toBe('Sobre mí');
+    expect(store.t('nav.about')).toBe('Sobre Mí');
     expect(document.documentElement.getAttribute('lang')).toBe('es');
   });
 

@@ -3,6 +3,7 @@ import { LanguageStore } from '../services/language-store';
 
 @Pipe({
   name: 'translate',
+  standalone: true,
   pure: false,
 })
 export class TranslatePipe implements PipeTransform {

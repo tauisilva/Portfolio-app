@@ -26,10 +26,10 @@ describe('TranslatePipe', () => {
 
   it('should transform translation key to active language text', () => {
     store.setLanguage('pt-BR');
-    expect(pipe.transform('nav.about')).toBe('Sobre');
+    expect(pipe.transform('nav.about')).toBe('Sobre Mim');
 
     store.setLanguage('en');
-    expect(pipe.transform('nav.about')).toBe('About');
+    expect(pipe.transform('nav.about')).toBe('About Me');
   });
 
   it('should handle empty key gracefully', () => {
